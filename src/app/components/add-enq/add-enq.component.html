@@ -1,0 +1,83 @@
+<h2>Add new Inquiry</h2>
+<nav class="dashboard-nav">
+  <a routerLink="/dashboard"
+    ><fa-icon [icon]="icons.faHome"></fa-icon>Dashboard</a
+  >
+  <a routerLink="/viewenq"
+    ><fa-icon [icon]="icons.faEye"></fa-icon>View All Enquiries</a
+  >
+  <a (click)="logout()" style="cursor: pointer"
+    ><fa-icon [icon]="icons.faSignOutAlt"></fa-icon>Logout</a
+  >
+</nav>
+<div class="container">
+  <h2>Add New Enquiry</h2>
+  <form (ngSubmit)="onSubmit()" class="enquiry-form">
+    <div class="form-group">
+      <label for="studentName">Student Name:</label>
+      <input
+        type="text"
+        id="studentName"
+        class="form-control"
+        [(ngModel)]="enquiry.studentName"
+        name="studentName"
+        required
+        placeholder="Enter student's name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="studentPhno">Student Phone Number:</label>
+      <input
+        type="tel"
+        id="studentPhno"
+        class="form-control"
+        [(ngModel)]="enquiry.studentPhno"
+        name="studentPhno"
+        required
+        placeholder="Enter student's phone number"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="courseName">Course Name:</label>
+      <input
+        type="text"
+        id="courseName"
+        class="form-control"
+        [(ngModel)]="enquiry.courseName"
+        name="courseName"
+        required
+        placeholder="Enter course name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="classMode">Class Mode (Online/Offline):</label>
+      <input
+        type="text"
+        id="classMode"
+        class="form-control"
+        [(ngModel)]="enquiry.classMode"
+        name="classMode"
+        required
+        placeholder="Enter class mode"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="enqStatus">Enquiry Status:</label>
+      <input
+        type="text"
+        id="enqStatus"
+        class="form-control"
+        [(ngModel)]="enquiry.enqStatus"
+        name="enqStatus"
+        required
+        placeholder="Enter enquiry status"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+  </form>
+</div>

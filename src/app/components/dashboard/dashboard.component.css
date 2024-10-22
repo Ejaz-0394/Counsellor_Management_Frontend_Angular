@@ -1,0 +1,65 @@
+/* dashboard.component.css */
+
+/* General styles for the dashboard */
+h2 {
+  color: #1098ad; /* Header color */
+  text-align: center; /* Center the headings */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+.dashboard-nav {
+  display: flex; /* Use flexbox for navigation */
+  justify-content: center; /* Center navigation items */
+  margin-bottom: 20px; /* Space below navigation */
+}
+
+.dashboard-nav a {
+  color: #1098ad; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  margin: 0 15px; /* Space between links */
+  font-size: 16px; /* Font size for links */
+}
+
+.dashboard-nav a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+hr {
+  border: 1px solid #ccc; /* Light border for horizontal rule */
+  margin: 20px 0; /* Space above and below the rule */
+}
+
+.dashboard-summary {
+  max-width: 600px; /* Max width for the summary section */
+  margin: 0 auto; /* Center the summary section */
+  margin-top: 160px;
+  padding: 20px; /* Padding around the summary */
+  border: 1px solid #1098ad; /* Border with your primary color */
+  border-radius: 8px; /* Rounded corners for the summary */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table {
+  width: 100%; /* Full width for the table */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+td {
+  padding: 10px; /* Padding inside table cells */
+  border-bottom: 1px solid #ddd; /* Light border between rows */
+  text-align: left; /* Align text to the left */
+}
+
+td:first-child {
+  font-weight: bold; /* Bold for the first column */
+  color: #1098ad; /* Color for the first column text */
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

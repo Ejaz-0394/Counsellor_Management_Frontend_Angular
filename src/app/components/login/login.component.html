@@ -1,0 +1,60 @@
+<div class="loginForm">
+  <form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+    <h2>Login</h2>
+
+    <!-- Added a heading for better UX -->
+
+    <label for="email">Email:</label>
+    <!-- Validations message code -->
+    <div class="input-wrapper">
+      <div *ngIf="email.invalid && loginForm.submitted" class="error-message">
+        <!-- Show 'required' message if the email is empty -->
+        <small *ngIf="email.errors && email.errors['required']"
+          >Email is required.</small
+        >
+        <!-- Show 'invalid email' message if the format is wrong -->
+        <small *ngIf="email.errors && email.errors['email']"
+          >Please enter a valid email.</small
+        >
+      </div>
+      <input
+        type="email"
+        [(ngModel)]="loginDetails.email"
+        name="email"
+        required
+        #email="ngModel"
+        [ngClass]="{ 'is-invalid': email.invalid && loginForm.submitted }"
+      />
+    </div>
+
+    <br />
+
+    <label for="password">Password:</label>
+    <div *ngIf="password.invalid && loginForm.submitted" class="error-message">
+      <!-- Show 'required' message if the password is empty -->
+      <small *ngIf="password.errors && password.errors['required']"
+        >Password is required.</small
+      >
+      <!-- Show 'minlength' message if the password is too short -->
+      <small *ngIf="password.errors && password.errors['minlength']"
+        >Password must be at least 6 characters long.</small
+      >
+    </div>
+    <input
+      type="password"
+      [(ngModel)]="loginDetails.password"
+      name="password"
+      required
+      #password="ngModel"
+      [ngClass]="{ 'is-invalid': password.invalid && loginForm.submitted }"
+    />
+
+    <br />
+
+    <button type="submit">
+      Login <fa-icon [icon]="faSignInAlt"></fa-icon>
+    </button>
+
+    <p><a routerLink="/register">Register here</a></p>
+  </form>
+</div>

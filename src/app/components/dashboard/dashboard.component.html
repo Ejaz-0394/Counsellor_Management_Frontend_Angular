@@ -1,0 +1,37 @@
+<h2>Welcome to Your Dashboard, {{ name }}</h2>
+
+<nav class="dashboard-nav">
+  <a routerLink="/add-inquiry"
+    ><fa-icon [icon]="faPlusCircle"></fa-icon>Add New Enquiry</a
+  >
+  <a routerLink="/viewenq"
+    ><fa-icon [icon]="faEye"></fa-icon>View All Enquiries</a
+  >
+  <a (click)="logout()" style="cursor: pointer"
+    ><fa-icon [icon]="faSignOut"></fa-icon>Logout</a
+  >
+</nav>
+
+<hr />
+
+<section class="dashboard-summary">
+  <h2>Dashboard Summary</h2>
+  <table>
+    <tr>
+      <td>Total Enquiries</td>
+      <td>{{ totalEnquiries }}</td>
+    </tr>
+    <tr>
+      <td>Open Enquiries</td>
+      <td>{{ openEnquiries }}</td>
+    </tr>
+    <tr>
+      <td>Enrolled Enquiries</td>
+      <td>{{ enrolledEnquiries }}</td>
+    </tr>
+    <tr>
+      <td>Lost Enquiries</td>
+      <td>{{ lostEnquiries }}</td>
+    </tr>
+  </table>
+</section>

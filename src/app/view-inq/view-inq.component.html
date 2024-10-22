@@ -1,0 +1,39 @@
+<h2 class="enquiry-title">Enquiry List</h2>
+<nav class="dashboard-nav">
+  <a routerLink="/dashboard"><fa-icon [icon]="faHome"></fa-icon>Dashboard</a>
+  <a routerLink="/add-inquiry">Add New Enquiry</a>
+  <a (click)="logout()" style="cursor: pointer">Logout</a>
+</nav>
+<div class="search-container">
+  <fa-icon [icon]="icons.faSearch" class="search-icon"></fa-icon>
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search Enquiries"
+    class="search-input"
+  />
+</div>
+<table class="enquiry-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Course Name</th>
+      <th>Class Mode</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let enquiry of filteredEnquiries()">
+      <td>{{ enquiry.studentName }}</td>
+      <td>{{ enquiry.studentPhno }}</td>
+      <td>{{ enquiry.courseName }}</td>
+      <td>{{ enquiry.classMode }}</td>
+      <td>{{ enquiry.enqStatus }}</td>
+      <td>
+        <button (click)="editEnquiry(enquiry)" class="edit-button">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

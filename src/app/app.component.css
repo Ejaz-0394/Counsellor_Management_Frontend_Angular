@@ -1,0 +1,5 @@
+.main-container {
+  flex: 1; /* Allow this container to take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}

@@ -1,0 +1,57 @@
+<form (ngSubmit)="register()" class="register-form">
+  <h2>Register Counselor</h2>
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="counsellor.counsellorName"
+      name="name"
+      required
+      placeholder="Enter your name"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      [(ngModel)]="counsellor.counsellorEmail"
+      name="email"
+      required
+      placeholder="Enter your email"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="counsellor.counsellorPwd"
+      name="password"
+      required
+      placeholder="Enter your password"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <input
+      type="tel"
+      id="phone"
+      [(ngModel)]="counsellor.counsellorPhno"
+      name="phone"
+      required
+      placeholder="Enter your phone number"
+      class="form-control"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
